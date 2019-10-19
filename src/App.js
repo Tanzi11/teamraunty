@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
+
 import StartPage from './components/StartPage'
 import Signup from './components/Signup'
 import AuntyPrefs from './components/AuntyPrefs'
@@ -12,13 +14,17 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <div className="App">
-      <StartPage />
-      <Signup />
-      <AuntyPrefs />
-      <MatchList />
-      <Chatbox />
-    </div>
+   <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" render={() => <StartPage />} />
+          <Route path="/signup" render={() => <Signup />} />
+          <Route path="/prefs" render={() => <AuntyPrefs />} />
+          <Route path="/matches" render={() => <MatchList />} />
+          <Route path="/chat" render={() => <Chatbox />} />
+        </Switch>
+      </div>
+   </Router>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
 export class AuntyPrefs extends React.Component {
     render() {
@@ -33,7 +34,9 @@ export class AuntyPrefs extends React.Component {
                         <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
                         <label class="form-check-label" for="exampleCheck1">Divination</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button  class="btn btn-primary">
+                        <Link to="/matches">See my matches</Link>
+                    </button>
                 </form>
             </section>
         )

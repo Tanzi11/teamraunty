@@ -8,3 +8,9 @@
 img {
   width: 100%;
 }
+
+button a,
+button a:hover {
+  color: white;
+  text-decoration: none;
+}
